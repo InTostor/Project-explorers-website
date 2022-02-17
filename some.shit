@@ -1,0 +1,9 @@
+<a class="item_name" href="lorem.html"><img class="item_img" src="images\items\builder.png" width="200" alt="lorem">
+    <img class="item_img_hidden" src="images/items/vipP_hiden.png" width="200">
+</a>
+<a class="item_name" href="lorem.html"><img class="item_img" src="images\items\premium.png" width="200" alt="lorem">
+    <img class="item_img_hidden" src="images/items/vipP_hiden.png" width="200">
+</a>
+<a class="item_name" href="lorem.html"><img class="item_img" src="images\items\premiumP.png" width="200" alt="lorem">
+    <img class="item_img_hidden" src="images/items/vipP_hiden.png" width="200">
+</a>

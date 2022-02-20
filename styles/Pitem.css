@@ -209,3 +209,54 @@ h6 {
     color: #32393f86;
     opacity: 0.4;
 }
+
+.main__block {
+    position: relative;
+    top: -10vh;
+    min-height: 40vh;
+}
+
+.filler {
+    background-color: tomato;
+    position: relative;
+    min-height: 2vh;
+    backdrop-filter: blur(35px);
+}
+
+.file__block {
+    width: 90%;
+    color: white;
+    display: flex;
+    border: white solid 5px;
+    border-radius: 10px;
+    margin: 2vh;
+    transition: color ease 0.2s;
+    transition: backdrop-filter ease 0.2s;
+}
+
+.file_name {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-weight: 800;
+    top: 1vh;
+    left: 5%;
+    text-align: center;
+    font-size: 26px;
+    margin: 0px, 10px;
+}
+
+.doc_image {
+    padding: 10px;
+    filter: invert(100%);
+}
+
+.file__block:hover {
+    color: tomato;
+    border: tomato solid 5px;
+    backdrop-filter: blur(10px);
+}
+
+.padd {
+    min-height: 2vh;
+}

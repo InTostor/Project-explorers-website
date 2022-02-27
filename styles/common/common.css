@@ -1,0 +1,38 @@
+/* Reset, fonts, margins and other shit */
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: rgb(5, 5, 5);
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+/* default elements */
+
+.container {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    margin: 0 auto;
+}

@@ -1,0 +1,82 @@
+.footer {
+    backdrop-filter: grayscale(0.75) contrast(0.75) blur(5px);
+    width: 100%;
+    min-height: 100px;
+    position: absolute;
+    margin-top: auto;
+    transform: translateY(-6px);
+    color: black;
+    z-index: 999;
+}
+
+.footer__logo {
+    font-size: 20px;
+}
+
+.footer__email {
+    font-size: 12px;
+    color: #002633;
+    transition: color ease 0.1s;
+}
+
+.footer__email:hover {
+    color: tomato;
+}
+
+.footer__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footer__nav__block {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 10px;
+}
+
+.footer__nav {
+    text-align: left;
+    display: inline-block;
+    max-width: 400px;
+    margin: auto;
+}
+
+.footer__navlink {
+    font-size: 12px;
+    margin: 0 10px;
+    color: #002633;
+    transition: color ease 0.1s;
+}
+
+.footer__navlink:hover {
+    color: tomato;
+}
+
+@media screen and (max-width: 1050px) {
+    .footer__nav {
+        position: relative;
+        left: -20%;
+        max-width: 500px;
+        width: 350%;
+    }
+    .footer__navlink {
+        font-size: 25px;
+    }
+    .footer__logo {
+        position: relative;
+        left: -20%;
+        font-size: 30px;
+    }
+    .footer__email {
+        position: relative;
+        left: -20%;
+        font-size: 17px;
+        color: #002633;
+        transition: color ease 0.1s;
+    }
+}

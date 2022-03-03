@@ -18,11 +18,11 @@
 
 
                 <nav class="nav">
-                    <a class="header__logo" href="index.html"> Project Explorers</a>
-                    <a class="nav__link" href="about.html"> О нас</a>
-                    <a class="nav__link" href="projects.html"> Проекты</a>
+                    <a class="header__logo" href="index.php"> Project Explorers</a>
+                    <a class="nav__link" href="about.php"> О нас</a>
+                    <a class="nav__link" href="projects.php"> Проекты</a>
                     <a class="nav__link" href="https://vk.com/projectexplorers"> Новости</a>
-                    <a class="nav__link" href="contacts.html"> Контакты</a>
+                    <a class="nav__link" href="contacts.php"> Контакты</a>
                 </nav>
                 <a class="account__mobile" href="account.php">Аккаунт</a>
 

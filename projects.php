@@ -13,7 +13,7 @@ include ('common/header.php');
     <title>Project Explorers</title>
     <meta name="description" content="Проект серверов в майнкрафт, beamng.drive." />
     <link rel="stylesheet" href="../../styles/common/common.css">
-    <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/projects.css">
 
 
 </head>
@@ -27,15 +27,16 @@ include ('common/header.php');
     <div class="container">
         <div class=filler>
             <div class="body__text">
-                <h1 class="intro__h1">Игровые сервера Project Explorers</h1>
-                <h2 class="intro__h2">Майнкрафт, Beamng.drive</h2>
-                <h3 class="intro__h3">Лучший РП сервер в майнкрафт с адекватной администрацией и сервер с минимальным
-                    пингом в beamng.drive</h3>
+                <h1 class="intro__h1">Наши сервера</h1>
+                <h3 class="intro__h3">какой-то текст</h3>
             </div>
-            <div class="body__inner">
-                <a class="body__inner__button" href="/projects.php  ">Наши сервера</a>
-                <a class="body__inner__button" href="#">Дискорд</a>
-            </div>"
+            <div class="row">
+                <a href="#" class="server__ico ico1">РП политика</a>
+                <a href="404.php" class="server__ico ico3">Пока ничего</a>
+                <a href="#" class="server__ico ico2">Beamng.drive</a>
+
+            </div>
+
         </div>
 
     </div>

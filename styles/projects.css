@@ -1,0 +1,144 @@
+.filler {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../images/background/12.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bg {
+    position: fixed;
+    width: 15.5%;
+    height: 100vh;
+    display: block;
+    backdrop-filter: blur(30px);
+    z-index: 1;
+}
+
+.bg1 {
+    position: fixed;
+    right: 0px;
+    width: 15.5%;
+    min-height: 100vh;
+    display: block;
+    backdrop-filter: blur(30px);
+    z-index: 1;
+}
+
+
+/* main content */
+
+.intro__h1 {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: tomato;
+    margin: auto;
+}
+
+.intro__h2 {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: tomato;
+}
+
+.intro__h3 {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: white;
+    max-width: 60%;
+}
+
+.body__text {
+    width: 97.5%;
+    margin: auto;
+    top: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: grayscale(0.75) contrast(0.75) blur(1px)hue-rotate(120deg);
+    z-index: 1;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.body__text:before {
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    height: 90vh;
+    margin-bottom: 10vh;
+    justify-content: space-around;
+}
+
+.server__ico {
+    top: auto;
+    background-image: url("../../images/icons/vanilla.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 200px;
+    border: 7px white solid;
+    border-radius: 10px;
+    color: aqua;
+    text-align: center;
+    filter: grayscale(0.45) contrast(0.85) hue-rotate(-20deg);
+    transition: all ease 0.25s;
+    margin: auto;
+}
+
+.server__ico:before {
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.server__ico:hover {
+    color: #1dad8b;
+    filter: none;
+}
+
+.ico1 {
+    background-image: url("../../images/icons/logo.png");
+}
+
+.ico2 {
+    background-image: url("../../images/icons/beamng.png");
+    background-size: 100%;
+    backdrop-filter: blur(30px);
+}
+
+.ico3 {
+    /* background-image: url("../../images/icons/logo.png"); */
+    background-image: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .row {
+        flex-direction: column;
+        justify-content: center;
+        bottom: 10vh;
+    }
+    .server__ico {
+        width: 300px;
+        height: 300px;
+    }
+    .filler {
+        min-height: 150vh;
+    }
+    .body__text {
+        top: 0;
+    }
+}

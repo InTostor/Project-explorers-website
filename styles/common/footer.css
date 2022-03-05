@@ -57,6 +57,10 @@
     color: tomato;
 }
 
+.author {
+    font-size: 10px;
+}
+
 @media screen and (max-width: 1050px) {
     .footer__nav {
         position: relative;

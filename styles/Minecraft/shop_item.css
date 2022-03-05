@@ -91,15 +91,22 @@
 }
 
 .item__logo {
-    margin: 0 auto;
-    background-image: url("/images/icons/logo.png");
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 20%;
-    height: 20%;
-    border: white solid 7px;
-    border-radius: 10px;
+}
+
+.main__block__part {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25%;
+    height: 50%;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
 }
 

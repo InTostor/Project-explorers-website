@@ -120,7 +120,7 @@ if (!empty($_POST['itsAuth'])) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>AuthMe Auth via php script!</title>
+<title>Эта страница еще в разработке!</title>
 <meta charset="utf-8">
 </head>
 <body>
@@ -213,7 +213,7 @@ if (!empty($_POST['itsAuth'])) {
 <div class="wrapper">
     <div class="form_wrap">
         <div class="title">
-            <h1>AuthMe скрипт</h1>
+            <h1>Эта страница еще в разработке!</h1>
         </div>
         <div class="block_form">
             <form method="POST">

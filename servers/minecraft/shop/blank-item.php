@@ -32,11 +32,17 @@ include ('../../../common/header.php');
                 <h3 class="intro__h3">описание</h3>
             </div>
             <div class="main__block">
-                <img width="100px" height="100px" class="server__logo">
-                <div class="server__info">
-                    <h1 class="server__name">Какой-то заголовок</h1>
-                    <p class="server__description">Много или не очень много текста, рассказывающего о сервере. Тут идет
-                        проверка переносов строки</p>
+                <img width="100px" height="100px" class="item__logo">
+                <div class="item__info">
+                    <h1 class="item__name">Какой-то заголовок</h1>
+                    <p class="item__description">Много или не очень много текста, рассказывающего о сервере. А тут
+                        начинается
+                        проверка переносов строки
+                        <?php
+                        include ('../shop/items-description/blank-item.txt');
+                    ?></p>
+
+
                 </div>
 
             </div>

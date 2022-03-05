@@ -1,0 +1,220 @@
+.filler {
+    width: 100%;
+    background-image: url("../../images/background/beam.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.block1 {
+    min-height: 100vh;
+}
+
+.block2 {
+    background-image: url("../../images/background/13.png");
+    min-height: 60vh;
+}
+
+.bg {
+    position: fixed;
+    width: 15.5%;
+    height: 100vh;
+    display: block;
+    backdrop-filter: blur(30px);
+    z-index: 1;
+}
+
+.bg1 {
+    position: fixed;
+    right: 0px;
+    width: 15.5%;
+    min-height: 100vh;
+    display: block;
+    backdrop-filter: blur(30px);
+    z-index: 1;
+}
+
+
+/* main content */
+
+.intro__h1 {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: tomato;
+    margin: auto;
+}
+
+.intro__h2 {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: tomato;
+}
+
+.intro__h3 {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: white;
+    max-width: 60%;
+}
+
+.body__text {
+    width: 97.5%;
+    margin: auto;
+    top: 10vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: grayscale(0.75) contrast(0.75) blur(1px)hue-rotate(120deg);
+    z-index: 1;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.body__text:before {
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.main__block {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.server__logo {
+    background-image: url("/images/icons/beamng.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20%;
+    height: auto;
+    border: white solid 7px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.server__info {
+    width: 60%;
+    z-index: 1;
+    backdrop-filter: grayscale(0.75) contrast(0.75) blur(1px)hue-rotate(120deg);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.server__info:before {
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.server__name {
+    font-size: 40px;
+}
+
+.server__description {
+    font-size: 20px;
+}
+
+.separator {
+    width: 100%;
+    height: 10px;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    max-height: 90vh;
+    margin-bottom: 10vh;
+    justify-content: space-around;
+}
+
+.row__element {
+    white-space: nowrap;
+    display: flex;
+    top: 50vh;
+    width: 400px;
+    height: fit-content;
+    border: 7px white solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    filter: grayscale(0.45) contrast(0.85) hue-rotate(-20deg);
+    margin: auto;
+    backdrop-filter: grayscale(0.75) contrast(0.75) blur(5px) hue-rotate(120deg);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.25s;
+}
+
+.row__element__:before {
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.row__element:hover {
+    backdrop-filter: grayscale(0.15) contrast(1) blur(1px) hue-rotate(0deg);
+    color: #1dad8b;
+    filter: none;
+}
+
+.row__element__inner {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-width: 100px;
+    min-height: 100px;
+    border-right: white solid 7px;
+    margin-right: 10px;
+    backdrop-filter: blur(30px);
+}
+
+.e1-1 {
+    background-image: url("/images/avatars/ava1.jpg");
+}
+
+.e1-2 {
+    background-image: url("/images/avatars/ava1.jpg");
+}
+
+.e2-1 {
+    background-image: url("/images/avatars/ava1.jpg");
+}
+
+.e2-2 {
+    background-image: url("/images/avatars/ava1.jpg");
+}
+
+@media screen and (max-width: 1050px) {
+    .server__info {
+        margin: auto;
+        width: 70%;
+    }
+    .server__name {
+        font-size: 45px;
+    }
+    .server__description {
+        font-size: 25px;
+    }
+    .server__logo {
+        margin: auto;
+    }
+    .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .row__element {
+        width: 70%;
+    }
+    .block2 {
+        min-height: 100vh;
+    }
+}

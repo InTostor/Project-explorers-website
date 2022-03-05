@@ -12,8 +12,8 @@ include ('common/header.php');
     <meta charset="utf-8">
     <title>Project Explorers</title>
     <meta name="description" content="Проект серверов в майнкрафт, beamng.drive." />
-    <link rel="stylesheet" href="../../styles/common/common.css">
-    <link rel="stylesheet" href="../../styles/projects.css">
+    <link rel="stylesheet" href="/styles/common/common.css">
+    <link rel="stylesheet" href="/styles/projects.css">
 
 
 </head>
@@ -31,9 +31,8 @@ include ('common/header.php');
                 <h3 class="intro__h3">какой-то текст</h3>
             </div>
             <div class="row">
-                <a href="#" class="server__ico ico1">РП политика</a>
-                <a href="404.php" class="server__ico ico3">Пока ничего</a>
-                <a href="#" class="server__ico ico2">Beamng.drive</a>
+                <a href="/servers/minecraft/RP-political.php" class="server__ico ico1">РП политика</a>
+                <a href="/servers/beamng/kissmp.php" class="server__ico ico2">Beamng.drive</a>
 
             </div>
 

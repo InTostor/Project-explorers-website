@@ -29,8 +29,7 @@ include ('common/header.php');
             <div class="body__text">
                 <h1 class="intro__h1">Игровые сервера Project Explorers</h1>
                 <h2 class="intro__h2">Майнкрафт, Beamng.drive</h2>
-                <h3 class="intro__h3">Лучший РП сервер в майнкрафт с адекватной администрацией и сервер с минимальным
-                    пингом в beamng.drive</h3>
+                <h3 class="intro__h3">Лучшие сервера в майнкрафт и Beamng.drive. Интересный опыт, адекватная администрация, хорошее железо, низкий пинг.</h3>
             </div>
             <div class="body__inner">
                 <a class="body__inner__button" href="/projects.php  ">Наши сервера</a>

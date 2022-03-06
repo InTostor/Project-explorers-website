@@ -1,4 +1,5 @@
 <?php
+include $_SERVER['DOCUMENT_ROOT']."/service/setting.php";
 
 // Если нажата кнопка "Купить"
 
@@ -9,7 +10,7 @@ if (isset($_POST['submit'])) {
     if (!empty($_POST['name']) ) {
         $m_shop   = '1549179620';   // id мерчанта
         $m_orderid   = '1'; //   номер счета в системе учета мерчанта
-        $m_amount   = number_format(19,   2, '.', ''); // сумма счета с двумя знаками после точки
+        $m_amount   = number_format($cost,   2, '.', ''); // сумма счета с двумя знаками после точки
         $m_curr   = 'RUB';   // валюта счета
         $nick = $_POST['name'];
         $desc = "1";
@@ -61,7 +62,21 @@ document.getElementById('payeer_form_real').submit();
 include ('../../../common/header.php');
 ?>
 
+<?php
 
+$item = $_GET["item"];
+$img_path="/images/items/".$item.".png";
+
+$json = file_get_contents(dirname(__FILE__)."/items-description/".$item.".json");
+$cost=$array['cost'];
+
+$array=json_decode($json,true);
+
+
+$desc=$array['description'];
+
+
+?>
 
 
 
@@ -75,9 +90,9 @@ include ('../../../common/header.php');
     <link rel="stylesheet" href="/styles/common/common.css">
     <link rel="stylesheet" href="/styles/Minecraft/shop_item.css">
     <style type="text/css">
-        .item__logo{
-            background-image: url("/images/items/vip.png");
-        }
+    .item__logo {
+        background-image: url(<?php echo $img_path;?>);
+    }
     </style>
 
 </head>
@@ -110,7 +125,7 @@ include ('../../../common/header.php');
                         начинается
                         проверка переносов строки
                         <?php
-                        include ('../shop/items-description/blank-item.txt');
+                        echo "<br>".$desc;
                     ?></p>
 
 

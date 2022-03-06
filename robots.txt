@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Host: explorers.net.ru
+Disallow: /tools
+Disallow: /service
+Disallow: /styles

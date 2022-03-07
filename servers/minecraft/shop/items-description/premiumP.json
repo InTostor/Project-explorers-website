@@ -1,0 +1,9 @@
+{
+    "name": "premium+",
+    "header1": "Premium+",
+    "header2": "",
+    "header3": "",
+    "desc_header": "Привелигии",
+    "cost": "599",
+    "description": "Все команды, доступные игроку +<br>Количество домов /sethome - 4<br>Роль на сервере в дискорд - mvp<br>Верстак по команде /workbench<br>Ремонт предметов /repair<br>Сменить время для себя /ptime<br>Вернуться на предыдущую позицию /back<br>Смена погоды для себя /pweather<br>Эндер-сундук /enderchest<br>Полет /fly<br>Восстановить сытость /feed<br>восстановить здоровье /heal<br>бессмертие /god<br>смена режима игры /gamemode <survival/creative/scpectator<br>Набор /kit builder<br>Набор /kit premium<br>набор /kit premium+<br><br>ВНИМАНИЕ!<br>вы теряете возможность продавать предметы (/sell) <br>"
+}

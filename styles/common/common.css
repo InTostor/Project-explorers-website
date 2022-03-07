@@ -39,7 +39,7 @@ a:link {
     left: 0;
     margin: auto;
     width: 80%;
-    height: 100%;
+    height: fit-content;
 }
 
 .bg {

@@ -1,0 +1,9 @@
+{
+    "name": "vip+",
+    "header1": "VIP+",
+    "header2": "",
+    "header3": "",
+    "desc_header": "Привилегии",
+    "cost": "29",
+    "description": "Все команды, доступные игроку +<br>Количество домов /sethome - 4<br>Роль на сервере в дискорд - vip+<br>Верстак по команде /workbench<br>Вернуться на предыдущую позицию /back<br>Смена погоды для себя /pweather<br>Эндер-сундук /enderchest<br>Полет /fly<br>Восстановить сытость /feed<br>Набор /kit vip<br>Набор /kit vip+<br>"
+}

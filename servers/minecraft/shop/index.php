@@ -1,32 +1,37 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/service/setting.php";
+include $_SERVER['DOCUMENT_ROOT']."/service/base_lib.php";
+try{
+$item = $_GET["item"];
+$img_path="/images/items/".$item.".png";
 
-// Если нажата кнопка "Купить"
+$json = file_get_contents(dirname(__FILE__)."/items-description/".$item.".json");
+$array=json_decode($json,true);
+$cost=$array['cost'];
+$item_name=$array['name'];
+$desc=$array['description'];
+$desc_header=$array['desc_header'];
+} catch (Exception $e){
+    echo $e->getMessage();
+    echo  $error_no_item;
 
+}
+
+// отправка данных на payeer
 if (isset($_POST['submit'])) {
-
-    // Если имя заполнено и выбран предмет
-
-    if (!empty($_POST['name']) ) {
-        $m_shop   = '1549179620';   // id мерчанта
-        $m_orderid   = '1'; //   номер счета в системе учета мерчанта
-        $m_amount   = number_format($cost,   2, '.', ''); // сумма счета с двумя знаками после точки
-        $m_curr   = 'RUB';   // валюта счета
-        $nick = $_POST['name'];
-        $desc = "1";
-        $desc = $desc . $nick;
-        $m_desc   = base64_encode($desc);   // описание счета, закодированное с помощью алгоритма base64
-        $m_key   = '65Wq0ArVSWnys1K4';
-        $arHash   = array($m_shop, $m_orderid, $m_amount, $m_curr, $m_desc);//   Добавляем доп. параметры, если вы их задали
-        if (isset($m_params)){  
-            $arHash[]   = $m_params;
-        }
-        //   Добавляем   секретный ключ
-        $arHash[]   = $m_key;
-        //   Формируем подпись
-        $sign   = strtoupper(hash('sha256',   implode(":", $arHash)));
-        ?>
-
+if (!empty($_POST['name']) ) {
+$m_orderid = '1'; // номер счета в системе учета мерчанта
+$m_amount = number_format($cost, 2, '.', ''); // сумма счета с двумя знаками после точки
+$nick = $_POST['name'];
+$desc = $item_name."Ё". $nick;
+$m_desc = base64_encode($desc); // описание счета, закодированное с помощью алгоритма base64
+$arHash = array($m_shop, $m_orderid, $m_amount, $m_curr, $m_desc);// Добавляем доп. параметры, если вы их задали
+if (isset($m_params)){
+$arHash[] = $m_params;
+}
+$arHash[] = $m_key;// Добавляем секретный ключ
+$sign = strtoupper(hash('sha256', implode(":", $arHash)));// Формируем подпись
+?>
 
 <form style="display:none" id="payeer_form_real" method="post" action="https://payeer.com/merchant/">
     <input type="hidden" name="m_shop" value="<?=$m_shop?>">
@@ -47,12 +52,10 @@ document.getElementById('payeer_form_real').submit();
     else
     {
         if (empty($_POST['name'])) {
-            echo "<script>alert('Вы не ввели ник');</script>";
+            alert('Вы не ввели ник');
         }        
      }
 }
-
-
 ?>
 
 
@@ -60,22 +63,6 @@ document.getElementById('payeer_form_real').submit();
 <?php
 // connecting header
 include ('../../../common/header.php');
-?>
-
-<?php
-
-$item = $_GET["item"];
-$img_path="/images/items/".$item.".png";
-
-$json = file_get_contents(dirname(__FILE__)."/items-description/".$item.".json");
-$cost=$array['cost'];
-
-$array=json_decode($json,true);
-
-
-$desc=$array['description'];
-
-
 ?>
 
 
@@ -89,11 +76,7 @@ $desc=$array['description'];
     <meta name="description" content="Проект серверов в майнкрафт, beamng.drive." />
     <link rel="stylesheet" href="/styles/common/common.css">
     <link rel="stylesheet" href="/styles/Minecraft/shop_item.css">
-    <style type="text/css">
-    .item__logo {
-        background-image: url(<?php echo $img_path;?>);
-    }
-    </style>
+
 
 </head>
 <div class="bg"></div>
@@ -106,27 +89,23 @@ $desc=$array['description'];
     <div class="container">
         <div class="filler block1">
             <div class="body__text">
-                <h1 class="intro__h1">Заголовок1</h1>
-                <h2 class="intro__h2">Заголовок2</h2>
-                <h3 class="intro__h3">описание</h3>
+                <h1 class="intro__h1"><?php echo $array['header1']?></h1>
+                <h2 class="intro__h2"><?php echo $array['header2']?></h2>
+                <h3 class="intro__h3"><?php echo $array['header3']?></h3>
             </div>
             <div class="main__block">
                 <div class="main__block__part">
-                    <img width="100px" height="100px" class="item__logo">
+                    <img src=<?php echo $img_path ?> width="100px" height="100px" class="item__logo">
                     <form method="post" action="">
                         <input class="field__nick" type="text" placeholder=" Ник" name="name">
-                        <p><input class="button__submit" type="submit" name="submit" value="Купить за 19р."></p>
+                        <p><input class="button__submit" type="submit" name="submit"
+                                value='<?php echo "поддержать на ".$cost ?>'></p>
 
                     </form>
-                </div>"
+                </div>
                 <div class="item__info">
-                    <h1 class="item__name">Какой-то заголовок</h1>
-                    <p class="item__description">Много или не очень много текста, рассказывающего о сервере. А тут
-                        начинается
-                        проверка переносов строки
-                        <?php
-                        echo "<br>".$desc;
-                    ?></p>
+                    <h1 class="item__name"><?php echo $desc_header ?></h1>
+                    <p class="item__description"> <?php echo "<br>".$desc;?> </p>
 
 
                 </div>

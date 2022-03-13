@@ -1,12 +1,13 @@
+<p>Вы нашли секретную страницу! Вернее это даже не страница, а просто текст. Вам лучше <a href="/">вернуться на
+        главную</a>, пока админ вас не заметил</p>
+
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/service/setting.php";
 include $_SERVER['DOCUMENT_ROOT']."/service/base_lib.php";
 require $_SERVER['DOCUMENT_ROOT']."/service/RCON.php";
 use Thedudeguy\Rcon;
+
 //   Отклоняем   запросы с   IP-адресов, которые   не принадлежат Payeer
-
-
-
 if   (!in_array($_SERVER['REMOTE_ADDR'],   array('185.71.65.92', '185.71.65.189','149.202.17.210','192.168.0.186','192.168.0.150','127.0.0.1')))   return;
 if  (isset($_POST['m_operation_id'])   && isset($_POST['m_sign'])) {
     $m_key   = '65Wq0ArVSWnys1K4';  

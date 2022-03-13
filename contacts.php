@@ -1,87 +1,120 @@
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . "/service/setting.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/service/base_lib.php";
+include($root . '/common/header.php');
+
+$json = file_get_contents(dirname(__FILE__) . "/contacts.json");
+$array = json_decode($json, true);
+$c1 = $array['1'];
+$c2 = $array['2'];
+$c3 = $array['3'];
+
+$c1_img = 'src="/images/avatars/' . $array['1-ava'] . '.png"';
+$c2_img = 'src="/images/avatars/' . $array['2-ava'] . '.png"';
+$c3_img = 'src="/images/avatars/' . $array['3-ava'] . '.png"';
+
+?>
+
+
+
 <!DOCTYPE HTML>
 <html lang="ru">
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../../styles/contacts.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
-    <title> Контакты</title>
+    <title>Контакты разработчиков</title>
+    <meta name="description" content="Свяжитесь с нами если есть вопросы или предложения" />
+    <link rel="stylesheet" href="/styles/common/common.css">
+    <link rel="stylesheet" href="/styles/contacts.css">
 </head>
 
-<header class="header">
-    <div class="container">
-        <div class="header__inner">
+<div class="bg"></div>
+<div class="bg1"></div>
 
-            <div class="header__logo"> <a class="header__logo" href="../../index.html"> Project Explorers</a></div>
-
-            <nav class="nav">
-                <a class="nav__link" href="../../about.html"> О нас</a>
-                <a class="nav__link" href="../../projects.html"> Проекты</a>
-                <a class="nav__link" href="../../shop.html">Магазин</a>
-                <a class="nav__link" href="https://vk.com/projectexplorers"> Новости</a>
-                <a class="nav__link" href="../../contacts.html"> Контакты</a>
-            </nav>
-        </div>
-    </div>
-</header>
+<body>
 
 
-<div class="intro">
 
     <div class="container">
-        <h2 class="intro__title">Контакты</h2>
-        <div class="intro__inner">
-
-            <a style="text-decoration: none" href="https://discord.com/invite/bPC673JHna">
-                <div class="file__block">
-                    <img class="doc_image" src="/images/icons/outline_description_black_48dp.png">
-                    <p class="file_name">Сервер в Discord </p>
-                </div>
-            </a>
-
-            <a style="text-decoration: none" href="https://vk.com/projectexplorers">
-                <div class="file__block">
-                    <img class="doc_image" width="96" src="/images/icons/vk512.png">
-                    <p class="file_name">Группа в ВК</p>
-                </div>
-            </a>
-
-            <a style="text-decoration: none" href="mailto:project-explorers-mc@outlook.com?subject=жалоба">
-                <div class="file__block">
-                    <img class="doc_image" src="/images/icons/outline_description_black_48dp.png">
-                    <p class="file_name">Почта: project-explorers-mc@outlook.com</p>
-                </div>
-            </a>
-
-
-
-
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-<footer class="footer">
-    <div class="container">
-        <div class=" footer__inner">
-            <div class="footer__authors">
-                <h1 class="authors">©2020-2022 Project Explorers Network     project-explorers-mc@outlook.com</h1>
+        <div class=filler id=about>
+            <div class="body__text">
+                <h1 class="intro__h1">О нас</h1>
+                <h2 class="intro__h2"></h2>
+                <h3 class="intro__h3">Кто мы, что делаем и зачем это все</h3>
             </div>
-            <div class="footer__info">
-                <nav class="footer__nav">
-                    <a class="nav__link__footer" href="/law.html"> Юридическая информация</a>
-                    <a class="nav__link__footer" href="/job.html"> Работа</a>
-                    <a class="nav__link__footer" href="mailto:project-explorers-mc@outlook.com?subject=жалоба"> Пожаловаться</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-</footer>
 
-</html>
+            <div class="info__inner">
+
+                <div class="acryl text__block">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="acryl text__block">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="separator"></div>
+
+        <div class=filler id=contacts>
+            <div class="body__text">
+                <h1 class="intro__h1">Наша команда</h1>
+                <h2 class="intro__h2"></h2>
+                <h3 class="intro__h3">Разработчики, дизайнеры, рекламщики, администраторы</h3>
+            </div>
+            <div class="row">
+
+                <div class="contact">
+                    <img <?php echo $c1_img ?> class="avatar" width="157" height="150">
+                    <div class="contact__text">
+                        <?php echo '<p class="contact__paragraph">' . $c1 . '</p>' ?>
+                    </div>
+                </div>
+                <div class="contact">
+                    <img <?php echo $c2_img ?> class="avatar" width="157" height="150">
+                    <div class="contact__text">
+                        <?php echo '<p class="contact__paragraph">' . $c2 . '</p>' ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="contact">
+                    <img <?php echo $c3_img ?> class="avatar" width="157" height="150">
+                    <div class="contact__text">
+                        <?php echo '<p class="contact__paragraph">' . $c3 . '</p>' ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+<?php
+include($root . '/common/footer.html');
+?>

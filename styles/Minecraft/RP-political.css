@@ -129,17 +129,19 @@
 .row {
     position: relative;
     display: flex;
-    gap: 20px;
     max-height: 90vh;
-    margin-bottom: 10vh;
+    margin: 10px auto 5px;
+    top: 5vh;
     justify-content: space-around;
+    width: 90%;
 }
 
 .row__element {
     white-space: nowrap;
     display: flex;
     top: 50vh;
-    width: 400px;
+    width: auto;
+    padding-right: 20px;
     height: fit-content;
     border: 7px white solid;
     border-radius: 10px;
@@ -149,7 +151,7 @@
     text-align: center;
     align-items: center;
     filter: grayscale(0.45) contrast(0.85) hue-rotate(-20deg);
-    margin: auto;
+    margin: auto auto 10px;
     backdrop-filter: grayscale(0.75) contrast(0.75) blur(5px) hue-rotate(120deg);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.2);
     transition: all ease 0.25s;
@@ -177,6 +179,7 @@
     border-right: white solid 7px;
     margin-right: 10px;
     backdrop-filter: blur(30px);
+    background-color: white;
 }
 
 .e1-1 {
@@ -184,7 +187,7 @@
 }
 
 .e1-2 {
-    background-image: url("/images/avatars/ava1.jpg");
+    background-image: url("/images/icons/3d-map.png");
 }
 
 .e2-1 {
@@ -192,7 +195,11 @@
 }
 
 .e2-2 {
-    background-image: url("/images/avatars/ava1.jpg");
+    background-image: url("/images/icons/faq.png");
+}
+
+.e3-2 {
+    background-image: url("/images/icons/2d-map.png");
 }
 
 @media screen and (max-width: 1050px) {

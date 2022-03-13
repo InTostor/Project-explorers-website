@@ -72,8 +72,8 @@ include ('../../../common/header.php');
 
 <head>
     <meta charset="utf-8">
-    <title>Project Explorers</title>
-    <meta name="description" content="Проект серверов в майнкрафт, beamng.drive." />
+    <title><?php echo $item_name?></title>
+    <meta name="description" content='<?php echo 'Поддержите проект, приобретите '.$item_name?>'>
     <link rel="stylesheet" href="/styles/common/common.css">
     <link rel="stylesheet" href="/styles/Minecraft/shop_item.css">
 

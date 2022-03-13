@@ -12,7 +12,7 @@ def file_manipulation(data):
         file.close()
 
 
-def pathFinder():
+def pathF():
     path = str(__file__).replace("convert-text-to-json.py", "")
 
     return str(path)
@@ -20,14 +20,16 @@ def pathFinder():
 
 try:
     file = open(
-        pathFinder() + str("text.txt"),
+        pathF() + str("text.txt"),
         "r",
     )
     toSave = file_manipulation(file)
-    f = open(pathFinder() + str("jsoned.txt"), "w")
+    f = open(pathF() + str("jsoned.txt"), "w")
     f.write(toSave)
     f.close()
 
 except Exception as excpt:
 
     print(excpt)
+
+print("done")

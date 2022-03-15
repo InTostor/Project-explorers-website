@@ -25,8 +25,10 @@ include('../../common/header.php');
 
 
     <div class="container">
+
         <div class="filler block1">
             <div class="body__text">
+
                 <h1 class="intro__h1">Политическо-ролевой сервер</h1>
                 <h2 class="intro__h2">Заголовок2</h2>
                 <h3 class="intro__h3">Версия 1.18.2 (обновляется через 1-3 недели, после выхода новой версии) </h3>

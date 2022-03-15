@@ -40,6 +40,7 @@ $answer = $array[$id];
 
 
     <div class="container">
+        <div class="filler start"></div>
         <div class=filler>
             <div class="acryl body__text">
                 <h1 class="intro__h1">Частые вопросы</h1>
@@ -47,13 +48,25 @@ $answer = $array[$id];
                 <h3 class="intro__h3">Кто мы, что делаем и зачем это все</h3>
             </div>
             <div class="questions">
-
-
-
-                <a href="?id=2" class="button1 acryl">
+                <a href="?id=how-to-communism" class="button1 acryl">
                     <div width="120px" height="120px" class="button1__logo"></div>
                     <p class="button1__text">Строительство коммунизма для чайников</p>
                 </a>
+
+                <a href="?id=earn-money" class="button1 acryl">
+                    <div width="120px" height="120px" class="button1__logo"></div>
+                    <p class="button1__text">Как заработать</p>
+                </a>
+                <a href="?id=town" class="button1 acryl">
+                    <div width="120px" height="120px" class="button1__logo"></div>
+                    <p class="button1__text">Все о городах (приваты)</p>
+                </a>
+                <a href="?id=town" class="button1 acryl">
+                    <div width="120px" height="120px" class="button1__logo"></div>
+                    <p class="button1__text">Как построить город</p>
+                </a>
+
+
 
             </div>
         </div>

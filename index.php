@@ -1,6 +1,6 @@
 <?php
 // connecting header
-include ('common/header.php');
+include('common/header.php');
 ?>
 
 
@@ -29,11 +29,12 @@ include ('common/header.php');
             <div class="body__text">
                 <h1 class="intro__h1">Игровые сервера Project Explorers</h1>
                 <h2 class="intro__h2">Майнкрафт, Beamng.drive</h2>
-                <h3 class="intro__h3">Лучшие сервера в майнкрафт и Beamng.drive. Интересный опыт, адекватная администрация, хорошее железо, низкий пинг.</h3>
+                <h3 class="intro__h3">Лучшие сервера в майнкрафт и Beamng.drive. Интересный опыт, адекватная
+                    администрация, хорошее железо, низкий пинг.</h3>
             </div>
             <div class="body__inner">
                 <a class="body__inner__button" href="/projects.php  ">Наши сервера</a>
-                <a class="body__inner__button" href="#">Дискорд</a>
+                <a class="body__inner__button" href="https://discord.gg/bPC673JHna">Дискорд</a>
             </div>"
         </div>
 
@@ -47,5 +48,5 @@ include ('common/header.php');
 
 </body>
 <?php
-include ('common/footer.html');
+include('common/footer.html');
 ?>
